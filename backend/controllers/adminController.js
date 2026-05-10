@@ -46,8 +46,8 @@ const adminLogin = async (req, res) => {
     // STORE TOKEN IN COOKIE
     res.cookie("adminToken", token, {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
       maxAge: 60 * 60 * 1000,
     });
 
