@@ -75,23 +75,23 @@ exports.isAdmin = async (req, res, next) => {
     });
   }
 };
-// exports.verifyAdmin = async (req, res) => {
-//   try {
-//     const token = req.cookies.adminToken;
+exports.verifyAdmin = async (req, res) => {
+  try {
+    const token = req.cookies.adminToken;
 
-//     if (!token) {
-//       return res.status(401).json({ isAdmin: false });
-//     }
+    if (!token) {
+      return res.status(401).json({ isAdmin: false });
+    }
 
-//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-//     if (decoded.role !== "admin") {
-//       return res.status(403).json({ isAdmin: false });
-//     }
+    if (decoded.role !== "admin") {
+      return res.status(403).json({ isAdmin: false });
+    }
 
-//     return res.json({ isAdmin: true });
+    return res.json({ isAdmin: true });
 
-//   } catch (error) {
-//     return res.status(401).json({ isAdmin: false });
-//   }
-// };
+  } catch (error) {
+    return res.status(401).json({ isAdmin: false });
+  }
+};
