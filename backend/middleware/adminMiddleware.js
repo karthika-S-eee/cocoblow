@@ -9,47 +9,47 @@
 // }
 const jwt = require("jsonwebtoken");
 
-exports.verifyAdmin = async (req, res, next) => {
+// exports.verifyAdmin = async (req, res, next) => {
 
-  try {
+//   try {
 
-    const token = req.cookies.adminToken;
+//     const token = req.cookies.adminToken;
 
-    if (!token) {
-      return res.status(401).json({
-        isAdmin: false,
-        message: "No token",
-      });
-    }
+//     if (!token) {
+//       return res.status(401).json({
+//         isAdmin: false,
+//         message: "No token",
+//       });
+//     }
 
-    const decoded = jwt.verify(
-      token,
-      process.env.JWT_SECRET
-    );
+//     const decoded = jwt.verify(
+//       token,
+//       process.env.JWT_SECRET
+//     );
 
-    if (decoded.role !== "admin") {
-      return res.status(403).json({
-        isAdmin: false,
-        message: "Not admin",
-      });
-    }
+//     if (decoded.role !== "admin") {
+//       return res.status(403).json({
+//         isAdmin: false,
+//         message: "Not admin",
+//       });
+//     }
 
-    req.admin = decoded;
+//     req.admin = decoded;
 
-    next();
+//     next();
 
-  } catch (error) {
+//   } catch (error) {
 
-    console.log(error);
+//     console.log(error);
 
-    return res.status(401).json({
-      isAdmin: false,
-      message: "Invalid token",
-    });
+//     return res.status(401).json({
+//       isAdmin: false,
+//       message: "Invalid token",
+//     });
 
-  }
+//   }
 
-};
+// };
 exports.isAdmin = async (req, res, next) => {
   try {
 
@@ -75,3 +75,23 @@ exports.isAdmin = async (req, res, next) => {
     });
   }
 };
+// exports.verifyAdmin = async (req, res) => {
+//   try {
+//     const token = req.cookies.adminToken;
+
+//     if (!token) {
+//       return res.status(401).json({ isAdmin: false });
+//     }
+
+//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+//     if (decoded.role !== "admin") {
+//       return res.status(403).json({ isAdmin: false });
+//     }
+
+//     return res.json({ isAdmin: true });
+
+//   } catch (error) {
+//     return res.status(401).json({ isAdmin: false });
+//   }
+// };
