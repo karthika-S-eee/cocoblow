@@ -15,13 +15,9 @@ const app = express();
 // CORS
 app.use(
   cors({
-<<<<<<< HEAD
+
     origin: ["http://localhost:5173", "https://cocoblow.vercel.app/"],
-=======
-    origin: ["http://localhost:5173",
-    "https://cocoblow.vercel.app/"],
->>>>>>> c2f7b60c777e8e0b317d8ceb94cae92a8b358665
-    credentials: true,
+    credentials: true
   })
 );
 
