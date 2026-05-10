@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
     "@tailwindcss/postcss": "^4.2.4",
+    "@vercel/speed-insights": "^2.0.0",
     "axios": "^1.16.0",
     "cros": "^1.1.0",
     "lucide-react": "^1.14.0",
