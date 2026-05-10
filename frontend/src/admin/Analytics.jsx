@@ -37,7 +37,7 @@ const Analytics = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/products",
+        "https://cocoblowbackend.onrender.com/api/products",
         {
           withCredentials: true,
         }

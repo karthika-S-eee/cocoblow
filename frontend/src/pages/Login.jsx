@@ -24,7 +24,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://cocoblowbackend.onrender.com/api/auth/login',
         formData
       )
       //  localStorage.setItem("userId", res.data.user._id);
@@ -150,7 +150,7 @@ localStorage.setItem(
 
         {/* Google Login */}
         <a
-          href='http://localhost:5000/api/auth/google'
+          href='https://cocoblowbackend.onrender.com/api/auth/google'
           className='mt-5 flex justify-center items-center border border-[#d5c4b2] bg-white py-3 rounded-lg text-sm font-semibold hover:bg-[#f5f5f5] transition-all'
         >
           Continue with Google

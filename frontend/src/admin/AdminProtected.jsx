@@ -14,7 +14,7 @@ const AdminProtected = ({ children }) => {
       try {
 
         const res = await axios.get(
-          "http://localhost:5000/api/admin/verify",
+          "https://cocoblowbackend.onrender.com/api/admin/verify",
           {
             withCredentials: true,
           }

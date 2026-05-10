@@ -14,7 +14,7 @@ const Order = () => {
       setLoading(true);
 
       const res = await axios.get(
-        `http://localhost:5000/api/orders/user/${userId}`
+        `https://cocoblowbackend.onrender.com/api/orders/user/${userId}`
       );
 
       setOrders(res.data || []);
@@ -33,7 +33,7 @@ const Order = () => {
   const receiveOrder = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/orders/received/${id}`
+        `https://cocoblowbackend.onrender.com/api/orders/received/${id}`
       );
 
       alert("Order received successfully");

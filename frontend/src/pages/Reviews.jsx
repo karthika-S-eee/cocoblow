@@ -13,7 +13,7 @@ const Reviews = ({ product }) => {
     try {
 
       await axios.post(
-        `http://localhost:5000/api/products/rating/${product._id}`,
+        `https://cocoblowbackend.onrender.com/api/products/rating/${product._id}`,
         {
           rating,
           comment,

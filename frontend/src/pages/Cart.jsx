@@ -26,7 +26,7 @@ const Cart = () => {
   const fetchCart = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/cart/${userId}`
+        `https://cocoblowbackend.onrender.com/api/cart/${userId}`
       );
 
       setCart(res.data || []);
@@ -43,7 +43,7 @@ const Cart = () => {
   const removeItem = async (item) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/cart/${item._id}`,
+        `https://cocoblowbackend.onrender.com/api/cart/${item._id}`,
         {
           data: { userId },
         }
@@ -59,7 +59,7 @@ const Cart = () => {
   const increaseQty = async (item) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/cart/${item.productId._id}`,
+        `https://cocoblowbackend.onrender.com/api/cart/${item.productId._id}`,
         {
           quantity: item.quantity + 1,
           userId,
@@ -77,7 +77,7 @@ const Cart = () => {
     try {
       if (item.quantity > 1) {
         await axios.put(
-          `http://localhost:5000/api/cart/${item.productId._id}`,
+          `https://cocoblowbackend.onrender.com/api/cart/${item.productId._id}`,
           {
             quantity: item.quantity - 1,
             userId,
@@ -149,13 +149,13 @@ console.log(orderData);
 
       // SAVE ORDER
       await axios.post(
-        "http://localhost:5000/api/orders/place",
+        "https://cocoblowbackend.onrender.com/api/orders/place",
         orderData
       );
 
       // CLEAR CART
       await axios.delete(
-        `http://localhost:5000/api/orders/clear/${userId}`
+        `https://cocoblowbackend.onrender.com/api/orders/clear/${userId}`
       );
 
       alert("Order placed successfully 🎉");

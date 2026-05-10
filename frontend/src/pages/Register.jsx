@@ -29,48 +29,13 @@ const Register = () => {
     })
   }
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-
-  //   try {
-  //     const res = await axios.post(
-  //       'http://localhost:5000/api/auth/register',
-  //       formData
-  //     )
-
-  //     console.log(res.data)
-
-  //     // Clear Form
-  //     setFormData({
-  //       name: '',
-  //       email: '',
-  //       phoneNumber: '',
-  //       address: '',
-  //       password: '',
-  //     })
-
-  //     alert('Registration Successful')
-
-  //     // Navigate to Home Page
-  //     setTimeout(() => {
-  //       navigate('/')
-  //     }, 500)
-
-  //   } catch (error) {
-  //     console.log(error)
-
-  //     alert(
-  //       error.response?.data?.message ||
-  //       'Register Failed'
-  //     )
-  //   }
-  // }
+  
   const handleSubmit = async (e) => {
   e.preventDefault()
 
   try {
     const res = await axios.post(
-      'http://localhost:5000/api/auth/register',
+      'https://cocoblowbackend.onrender.com/api/auth/register',
       formData
     )
 

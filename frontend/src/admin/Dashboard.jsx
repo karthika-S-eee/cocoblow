@@ -12,9 +12,6 @@ import {
   ResponsiveContainer,
   CartesianGrid,
   Legend,
-  PieChart,
-  Pie,
-  Cell,
 } from "recharts";
 
 import {
@@ -36,7 +33,7 @@ const getOrders = async () => {
   try {
 
     const res = await axios.get(
-      "http://localhost:5000/api/orders",{
+      "https://cocoblowbackend.onrender.com/api/orders",{
         withCredentials: true
       }
     );
@@ -57,7 +54,7 @@ const updateDeliveryDays = async (
   try {
 
     await axios.put(
-      `http://localhost:5000/api/orders/delivery/${id}`,
+      `https://cocoblowbackend.onrender.com/api/orders/delivery/${id}`,
       {
         withCredentials: true
       },
@@ -79,7 +76,7 @@ const markAsReceived = async (id) => {
   try {
 
     await axios.put(
-      `http://localhost:5000/api/orders/received/${id}`,
+      `https://cocoblowbackend.onrender.com/api/orders/received/${id}`,
        {
         withCredentials: true
       }
@@ -99,7 +96,7 @@ const markAsReceived = async (id) => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/products",
+        "https://cocoblowbackend.onrender.com/api/products",
         {
            
         withCredentials: true

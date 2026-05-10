@@ -36,7 +36,7 @@ const AddProduct = () => {
       console.log(token);
       // API CALL
       const res = await axios.post(
-        "http://localhost:5000/api/products/add",
+        "https://cocoblowbackend.onrender.com/api/products/add",
         formData,{
           withCredentials: true
         },

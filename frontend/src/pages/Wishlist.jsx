@@ -12,7 +12,7 @@ const WishlistPage = () => {
   // 📦 GET ALL PRODUCTS
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://cocoblowbackend.onrender.com/api/products");
       setProducts(res.data);
     } catch (err) {
       console.log(err);
@@ -23,7 +23,7 @@ const WishlistPage = () => {
   const fetchWishlist = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/wishlist/user/${userId}`
+        `https://cocoblowbackend.onrender.com/api/wishlist/user/${userId}`
       );
 
       const ids = res.data.map((item) =>
@@ -44,7 +44,7 @@ const WishlistPage = () => {
   // 🔁 TOGGLE WISHLIST
   const toggleWishlist = async (product) => {
     try {
-      await axios.post("http://localhost:5000/api/wishlist/toggle", {
+      await axios.post("https://cocoblowbackend.onrender.com/api/wishlist/toggle", {
         userId,
         productId: product._id,
       });
@@ -79,7 +79,7 @@ const WishlistPage = () => {
               >
                 <div className="relative">
                   <img
-                    src={`http://localhost:5000/${item.image}`}
+                    src={`https://cocoblowbackend.onrender.com/${item.image}`}
                     className="h-[220px] w-full object-cover"
                   />
 

@@ -19,7 +19,7 @@ const Shop = () => {
   // 📦 FETCH PRODUCTS
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://cocoblowbackend.onrender.com/api/products")
       .then((res) => setItems(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -30,7 +30,7 @@ const Shop = () => {
       if (!userId) return;
 
       const res = await axios.get(
-        `http://localhost:5000/api/wishlist/user/${userId}`
+        `https://cocoblowbackend.onrender.com/api/wishlist/user/${userId}`
       );
        const ids = res.data.map(
       (item) => item._id
@@ -51,7 +51,7 @@ const Shop = () => {
     if (!selectedProduct) return;
 
     try {
-      await axios.post("http://localhost:5000/api/cart/add", {
+      await axios.post("https://cocoblowbackend.onrender.com/api/cart/add", {
         userId,
         productId: selectedProduct._id,
         quantity: qty,
@@ -82,7 +82,7 @@ const Shop = () => {
       );
 
       const res = await axios.post(
-        "http://localhost:5000/api/wishlist/toggle",
+        "https://cocoblowbackend.onrender.com/api/wishlist/toggle",
         {
           userId,
           productId,
@@ -133,7 +133,7 @@ const Shop = () => {
               {/* IMAGE */}
               <div className="relative">
                 <img
-                  src={`http://localhost:5000/${product.image}`}
+                  src={`https://cocoblowbackend.onrender.com/${product.image}`}
                   alt={product.name}
                   className="w-full h-[220px] object-cover"
                 />

@@ -52,7 +52,7 @@ const Header = () => {
       if (!userId) return;
 
       const res = await axios.get(
-        `http://localhost:5000/api/cart/${userId}`
+        `https://cocoblowbackend.onrender.com/api/cart/${userId}`
       );
 
       setCartItems(res.data || []);
@@ -78,7 +78,7 @@ const Header = () => {
       if (!userId) return;
 
       const res = await axios.get(
-        `http://localhost:5000/api/wishlist/user/${userId}`
+        `https://cocoblowbackend.onrender.com/api/wishlist/user/${userId}`
       );
 
       setWishlist(res.data || []);

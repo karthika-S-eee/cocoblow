@@ -15,7 +15,7 @@ const UpdateProduct = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/products",
+        "https://cocoblowbackend.onrender.com/api/products",
          {
         withCredentials: true
       }
@@ -74,7 +74,7 @@ const UpdateProduct = () => {
     };
 
     await axios.put(
-      `http://localhost:5000/api/products/update/${selectedProduct._id}`,
+      `https://cocoblowbackend.onrender.com/api/products/update/${selectedProduct._id}`,
       updatedData,
        {
         withCredentials: true,
@@ -144,7 +144,7 @@ const UpdateProduct = () => {
             {/* IMAGE */}
 
             <img
-              src={`http://localhost:5000/${selectedProduct.image}`}
+              src={`https://cocoblowbackend.onrender.com/${selectedProduct.image}`}
               alt={selectedProduct.name}
               className="w-full h-64 object-cover rounded-2xl"
             />

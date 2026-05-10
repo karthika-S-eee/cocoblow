@@ -15,7 +15,7 @@ const DeleteProduct = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/products",
+        "https://cocoblowbackend.onrender.com/api/products",
          {
         withCredentials: true
       }
@@ -56,7 +56,7 @@ const DeleteProduct = () => {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/products/delete/${selectedProduct._id}`,
+        `https://cocoblowbackend.onrender.com/api/products/delete/${selectedProduct._id}`,
         {
           withCredentials: true,
         }

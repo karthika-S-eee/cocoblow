@@ -19,7 +19,7 @@ const AdminLogin = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        "https://cocoblowbackend.onrender.com/api/admin/login",
         form,
         {
     withCredentials: true,
@@ -33,19 +33,7 @@ const AdminLogin = () => {
       alert("Admin Login Successful");
 
         navigate("/admin/dashboard");
-      // console.log(form)
-
-      // assuming backend returns { token, admin }
-      // if (res.data?.token) {
-      //   //localStorage.setItem("token", res.data.token);
-        
-      //   alert("Admin Login Successful");
-
-      //   navigate("/admin/dashboard");
-      // } 
-      // else {
-      //   alert("Invalid response from server");
-      // }
+      
     } catch (err) {
       console.error(err);
       alert(

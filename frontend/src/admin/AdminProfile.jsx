@@ -17,7 +17,7 @@ const AdminProfile = () => {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/admin/logout",
+        "https://cocoblowbackend.onrender.com/api/admin/logout",
         {},
         {
           withCredentials: true,
@@ -64,7 +64,7 @@ const AdminProfile = () => {
     mx-auto
   "
 >
-  {user?.name?.charAt(0)}
+  {admin?.name?.charAt(0)}
 </div>
 
           {/* TITLE */}

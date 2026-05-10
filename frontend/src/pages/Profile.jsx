@@ -18,7 +18,7 @@ const UserProfile = () => {
 
       // OPTIONAL BACKEND LOGOUT
       await axios.post(
-        "http://localhost:5000/api/auth/logout",
+        "https://cocoblowbackend.onrender.com/api/auth/logout",
         {},
         {
           withCredentials: true,
