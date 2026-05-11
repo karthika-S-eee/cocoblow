@@ -33,7 +33,7 @@ const AddProduct = () => {
 
       // TOKEN FROM LOCAL STORAGE
       const token = localStorage.getItem("token");
-      console.log(token);
+      //console.log(token);
       // API CALL
       const res = await axios.post(
         "https://cocoblowbackend.onrender.com/api/products/add",

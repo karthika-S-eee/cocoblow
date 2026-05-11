@@ -197,7 +197,7 @@ console.log(orderData);
                   className="bg-white rounded-2xl shadow-md overflow-hidden"
                 >
                   <img
-                    src={`http://localhost:5000/${item.productId.image}`}
+                    src={`https://cocoblowbackend.onrender.com/${item.productId.image}`}
                     className="h-[220px] w-full object-cover"
                     alt={item.productId.name}
                   />
