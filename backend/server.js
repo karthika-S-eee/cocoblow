@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
-
+const path = require("path");
 dotenv.config();
 
 const app = express();
@@ -44,7 +44,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // STATIC
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname,"uploads"));
 
 // ROUTES
 app.use("/api/products", require("./routes/productRoutes"));
