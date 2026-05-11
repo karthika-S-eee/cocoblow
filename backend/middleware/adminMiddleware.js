@@ -75,7 +75,7 @@ exports.isAdmin = async (req, res, next) => {
     });
   }
 };
-exports.verifyAdmin = async (req, res) => {
+exports.verifyAdmin = async (req, res,next) => {
   try {
     const token = req.cookies.adminToken;
 
@@ -89,8 +89,8 @@ exports.verifyAdmin = async (req, res) => {
       return res.status(403).json({ isAdmin: false });
     }
 
-    return res.json({ isAdmin: true });
-
+    //return res.json({ isAdmin: true });
+    next();
   } catch (error) {
     return res.status(401).json({ isAdmin: false });
   }

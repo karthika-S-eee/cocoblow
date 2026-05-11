@@ -43,6 +43,8 @@ const { removeDeletedProductFromCart } = require("./cartController");
 // };
 exports.addProduct = async (req, res) => {
   try {
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
     const { name, category, price, stock, description } = req.body;
 
     if (!name) {
