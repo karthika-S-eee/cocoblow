@@ -38,9 +38,7 @@ const AddProduct = () => {
       const res = await axios.post(
         "https://cocoblowbackend.onrender.com/api/products/add",
         formData,{
-          withCredentials: true
-        },
-        {
+          withCredentials: true,
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
