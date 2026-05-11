@@ -144,7 +144,7 @@ const UpdateProduct = () => {
             {/* IMAGE */}
 
             <img
-              src={`https://cocoblowbackend.onrender.com/${selectedProduct.image}`}
+              src={`https://cocoblowbackend.onrender.com/uploads/${selectedProduct.image}`}
               alt={selectedProduct.name}
               className="w-full h-64 object-cover rounded-2xl"
             />

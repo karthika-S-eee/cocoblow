@@ -126,7 +126,7 @@ const DeleteProduct = () => {
             {/* IMAGE */}
 
             <img
-              src={`http://localhost:5000/${selectedProduct.image}`}
+              src={`https://cocoblowbackend.onrender.com/uploads/${selectedProduct.image}`}
               alt={selectedProduct.name}
               className="w-full h-64 object-cover rounded-2xl"
             />

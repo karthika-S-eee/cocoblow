@@ -133,7 +133,7 @@ const Shop = () => {
               {/* IMAGE */}
               <div className="relative">
                 <img
-                  src={`https://cocoblowbackend.onrender.com/${product.image}`}
+                  src={`https://cocoblowbackend.onrender.com/uploads/${product.image}`}
                   alt={product.name}
                   className="w-full h-[220px] object-cover"
                 />

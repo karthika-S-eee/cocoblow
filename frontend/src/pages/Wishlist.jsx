@@ -79,7 +79,7 @@ const WishlistPage = () => {
               >
                 <div className="relative">
                   <img
-                    src={`https://cocoblowbackend.onrender.com/${item.image}`}
+                    src={`https://cocoblowbackend.onrender.com/uploads/${item.image}`}
                     className="h-[220px] w-full object-cover"
                   />
 
