@@ -16,7 +16,7 @@ const app = express();
 app.use(
   cors({
 
-    origin: ["http://localhost:5173", "https://cocoblow.vercel.app"],
+    origin: ["http://localhost:5173", "https://cocoblom.vercel.app"],
     credentials: true
   })
 );

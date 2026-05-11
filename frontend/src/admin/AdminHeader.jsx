@@ -16,7 +16,7 @@ const AdminHeader = () => {
 
         {/* LOGO */}
         <h1 className="text-3xl font-extrabold">
-          CocoMart Admin
+          CocoBlom Admin
         </h1>
 
         {/* NAVIGATION */}

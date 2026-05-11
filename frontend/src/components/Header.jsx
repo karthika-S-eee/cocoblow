@@ -234,7 +234,7 @@ const Header = () => {
           </span>
 
           <span className="text-[#7a8b32] font-black ml-1">
-            Blow
+            Blom
           </span>
 
         </Link>

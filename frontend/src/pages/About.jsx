@@ -31,7 +31,7 @@ const About = () => {
             <p>
               Welcome to{" "}
               <span className="font-semibold text-[#6f7d31]">
-                CocoBlow
+                CocoBlom
               </span>,
               your trusted destination for pure, natural, and eco-friendly
               coconut-based products. We are dedicated to bringing you the
@@ -40,7 +40,7 @@ const About = () => {
             </p>
 
             <p>
-              At CocoBlow, we believe in promoting a sustainable lifestyle.
+              At CocoBlom, we believe in promoting a sustainable lifestyle.
               Our range of products includes coconut oil, coir-based items,
               organic essentials, and eco-friendly alternatives designed to
               support both your health and the environment.
@@ -61,7 +61,7 @@ const About = () => {
 
             <p>
               With a user-friendly shopping experience, secure payment
-              options, and reliable delivery service, CocoBlow is committed
+              options, and reliable delivery service, CocoBlom is committed
               to providing you with the best online shopping experience.
             </p>
 
