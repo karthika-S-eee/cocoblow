@@ -44,7 +44,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // STATIC
-app.use("/uploads", express.static(path.join(__dirname,"uploads"));
+app.use("/uploads", express.static(path.join(__dirname,"uploads")));
 
 // ROUTES
 app.use("/api/products", require("./routes/productRoutes"));
